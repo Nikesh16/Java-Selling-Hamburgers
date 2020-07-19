@@ -1,0 +1,19 @@
+package com.company;
+
+public class DeluxeBurger extends Hamburger{
+    private int chips;
+    private int drinks;
+
+    public DeluxeBurger( String meat) {
+        super("BB", meat, "Deluxe Burger");
+        this.chips = 2;
+        this.drinks = 4;
+    }
+
+    @Override
+    public int price() {
+        System.out.println("Price of Bread and chicken is "+ super.price());
+        System.out.println("Cost of Additional Chips and Drinks is " + (chips + drinks) );
+        return super.price() + 6;
+    }
+}
