@@ -1,0 +1,138 @@
+package com.company;
+
+public class Hamburger {
+
+
+    private String rollType;
+    private String meat;
+    private String addition1;
+    private String addition2;
+    private String addition3;
+    private String addition4;
+    private String burgerName;
+    public Hamburger(String rollType, String meat, String burgerName) {
+        this.rollType = rollType ;
+        this.meat = meat;
+        this.burgerName = burgerName;
+    }
+
+    public void setAddition1(String addition1) {
+        this.addition1 = addition1;
+    }
+
+    public void setAddition2(String addition2) {
+        this.addition2 = addition2;
+    }
+
+    public void setAddition3(String addition3) {
+        this.addition3 = addition3;
+    }
+
+    public void setAddition4(String addition4) {
+        this.addition4 = addition4;
+    }
+
+    public void setRollType(String rollType) {
+        this.rollType = rollType;
+    }
+
+    public void setMeat(String meat) {
+        this.meat = meat;
+    }
+
+    public void setBurgerName(String burgerName) {
+        this.burgerName = burgerName;
+    }
+
+    public String getRollType() {
+        return rollType;
+    }
+
+    public String getMeat() {
+        return meat;
+    }
+
+    public String getAddition1() {
+        return addition1;
+    }
+
+    public String getAddition2() {
+        return addition2;
+    }
+
+    public String getAddition3() {
+        return addition3;
+    }
+
+    public String getAddition4() {
+        return addition4;
+    }
+
+    public String getBurgerName() {
+        return burgerName;
+    }
+
+    public int price(){
+        if(rollType.equals("BR")){
+            System.out.println("Brown Rye Selected: Cost = 5");
+            return 5+meatPrice(meat);
+        } else {
+            System.out.println("Brown Spicy Rye Selected: Cost = 6");
+            return 6+meatPrice(meat);
+        }
+    }
+    public int meatPrice(String meat){
+        int meatP = 0;
+
+        switch (meat.toLowerCase()){
+            case "chicken":
+                meatP = 5;
+                System.out.println("Price of Selected Chicken is " + meatP);
+                break;
+            case "beef":
+                meatP = 6;
+                System.out.println("Price of Selected beef is " + meatP);
+                break;
+            case "dog":
+                meatP = 3;
+                System.out.println("Price of Selected dog is " + meatP);
+                break;
+            case "pig":
+                meatP = 8;
+                System.out.println("Price of Selected pig is " + meatP);
+                break;
+            default:
+                meatP = 0;
+                break;
+        }
+        return meatP;
+    }
+
+    public int additionPrice(String addition){
+        int selectedPrice = 0;
+        switch (addition.toLowerCase()){
+            case "sauce":
+                selectedPrice = 2;
+                break;
+            case "tomato":
+                selectedPrice = 1;
+                break;
+            case "cabbage":
+                selectedPrice = 4;
+                break;
+            case "carrot":
+                selectedPrice = 7;
+                break;
+            case "colddrinks":
+                selectedPrice = 20;
+                break;
+            case "water":
+                selectedPrice = 10;
+                break;
+            default:
+                selectedPrice = 0;
+                break;
+        }
+        return selectedPrice;
+    }
+}
