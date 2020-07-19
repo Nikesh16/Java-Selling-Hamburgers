@@ -1,0 +1,31 @@
+package com.company;
+
+public class HealthyBurger  extends Hamburger{
+    private String healthBurgerAddition1;
+    private String healthyBurgerAddition2;
+
+
+    public HealthyBurger(String meat,  String healthBurgerAddition1, String healthyBurgerAddition2) {
+        super("BR", meat, "Healthy Burger");
+        this.healthBurgerAddition1 = healthBurgerAddition1;
+        this.healthyBurgerAddition2 = healthyBurgerAddition2;
+    }
+
+    public String getHealthBurgerAddition1() {
+        return healthBurgerAddition1;
+    }
+
+    public void setHealthBurgerAddition1(String healthBurgerAddition1) {
+        this.healthBurgerAddition1 = healthBurgerAddition1;
+    }
+
+    public String getHealthyBurgerAddition2() {
+        return healthyBurgerAddition2;
+    }
+
+    public void setHealthyBurgerAddition2(String healthyBurgerAddition2) {
+        this.healthyBurgerAddition2 = healthyBurgerAddition2;
+    }
+
+
+}
